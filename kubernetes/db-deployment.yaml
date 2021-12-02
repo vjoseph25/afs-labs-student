@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: db-deployment
   namespace: vjoseph
   labels:
-    app: app
+    app: db
 spec:
   replicas: 1
   strategy:
@@ -12,17 +12,17 @@ spec:
   minReadySeconds: 20
   selector:
     matchLabels:
-      app: app
+      app: db
   template:
     metadata:
       labels:
-        app: app
+        app: db
     spec:
       containers:
       - name: app
-        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/app:49d0fd3-0f893ec
+        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/db:49d0fd3-0f893ec
         ports:
-        - containerPort: 5000
+        - containerPort: 5432
         envFrom:
         - secretRef:
             name: db-secret
