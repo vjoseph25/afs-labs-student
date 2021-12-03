@@ -24,5 +24,7 @@ spec:
         ports:
         - containerPort: 5000
         envFrom:
+        - configMapRef:
+            name: feature-toggle
         - secretRef:
             name: db-secret
