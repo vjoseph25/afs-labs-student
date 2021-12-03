@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: db-deployment
-        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/db:09e1458-0f893ec
+        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/db:2ae8ab6-6e3203b
         ports:
         - containerPort: 5432
         envFrom:

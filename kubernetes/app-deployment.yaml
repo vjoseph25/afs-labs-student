@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: app-deployment
-        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/app:65b0dd0-184e402
+        image: harbor.dev.afsmtddso.com/vjoseph-harbor-project/app:65b0dd0-6e3203b
         ports:
         - containerPort: 5000
         envFrom:
